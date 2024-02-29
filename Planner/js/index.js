@@ -38,6 +38,7 @@ function previewStart(){
             previewOn=true
         }
     }
+    console.log(previewOn)
 }
 
 function preview(e){

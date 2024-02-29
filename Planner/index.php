@@ -98,18 +98,18 @@
     }
     ?>
   </section>
-  <button id="newbtn">New lesson</button>
-  <form action="get" id="inplength">
+  <button id="newbtn">Turn on/off preview</button>
+  <form action="get" id="inp">
     <label for="name">Óra hossza: </label>
-    <input type="number" name="length" id="">
-    <select name="" id="">
+    <input type="number" name="length" id="length">
+    <select name="" id="color">
       <option value="#FF0000">Red</option>
       <option value="#0000FF">Blue</option>
     </select>
-    <button id="placeLesson">Ok</button>
+    <button id="confirm">Ok</button>
   </form>
 
 </body>
-<script src="js\index.js"></script>
+<script src="js\index2.js"></script>
 
 </html>
