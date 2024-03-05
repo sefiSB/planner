@@ -21,7 +21,7 @@ function prevOnOff() {
 
 
 function checkValid(ind){
-  if(ind+length*7<inside.length){
+  if(ind+(length.value-1)*7<inside.length){
     return true;
   }
   return false;
@@ -30,10 +30,22 @@ function checkValid(ind){
 function preview(e) {
   if (prevOn) {
     let pos = inside.findIndex((element) => element == e.target)
-    console.log(pos)
-    e.target.style.backgroundColor = color.value;
+    if(checkValid(pos)){
+      for(let i = pos; i<pos+(length.value)*7; i+=7){
+        console.log('a')
+        inside[i].style.backgroundColor = color.value;
+      }
+    }
+    
   }
 }
 function previewOff(e) {
-  e.target.style.backgroundColor = "";
+  /* e.target.style.backgroundColor = ""; */
+  let pos = inside.findIndex((element) => element == e.target)
+  if(checkValid(pos)){
+    for(let i = pos; i<pos+(length.value)*7; i+=7){
+      console.log('a')
+      inside[i].style.backgroundColor = "";
+    }
+  }
 }
